@@ -173,10 +173,8 @@ if (facilitySize && waterStress && coolingShift) {
     refs.scenarioTitle.textContent = getScenario(size);
     refs.scenarioBadge.textContent = getBadge(overallScore);
 
-    let takeaway = 'OceanFlow looks most valuable where facility demand is meaningful and freshwater pressure is real.';
-    if (stress >= 4 && shift >= 70) takeaway = 'This is where the concept becomes easiest to defend: big cooling demand, high water pressure, and meaningful OceanFlow usage.';
-    else if (size <= 50 && shift <= 35) takeaway = 'At smaller scale, OceanFlow still helps, but the value story is more moderate and strategic than dramatic.';
-    else if (size >= 120) takeaway = 'At larger scale, the cooling and sustainability story becomes easier to visualize and explain.';
+    let takeaway = "OceanFlow's cooling advantages scale with your data center.";
+  
     refs.takeawayText.textContent = takeaway;
 
     refs.resultExplainer.textContent = `With a ${size} MW facility, ${stressWords[stress - 1].toLowerCase()} freshwater stress, and ${shift}% of cooling shifted toward OceanFlow support, the model shows a ${waterRelief}% freshwater-pressure relief effect and a ${coolingAdvantage}% cooling advantage effect.`;
